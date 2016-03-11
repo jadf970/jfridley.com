@@ -9,6 +9,7 @@ define( "TEMPLATE_PATH", "templates" );
 define( "HOMEPAGE_NUM_ARTICLES", 5 );
 define( "ADMIN_USERNAME", "root" );
 define( "ADMIN_PASSWORD", "password" );
+define( "PAGE_TITLE", "You Are The One" );
 require( CLASS_PATH . "/Article.php" );
  
 function handleException( $exception ) {

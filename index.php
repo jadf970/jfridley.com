@@ -20,7 +20,7 @@ function archive() {
   $data = Article::getList();
   $results['articles'] = $data['results'];
   $results['totalRows'] = $data['totalRows'];
-  $results['pageTitle'] = "Article Archive | Widget News";
+  $results['pageTitle'] = "Article Archive | " . PAGE_TITLE;
   require( TEMPLATE_PATH . "/archive.php" );
 }
  
@@ -32,7 +32,7 @@ function viewArticle() {
  
   $results = array();
   $results['article'] = Article::getById( (int)$_GET["articleId"] );
-  $results['pageTitle'] = $results['article']->title . " | Widget News";
+  $results['pageTitle'] = $results['article']->title . " | " . PAGE_TITLE;
   require( TEMPLATE_PATH . "/viewArticle.php" );
 }
  
@@ -41,7 +41,7 @@ function homepage() {
   $data = Article::getList( HOMEPAGE_NUM_ARTICLES );
   $results['articles'] = $data['results'];
   $results['totalRows'] = $data['totalRows'];
-  $results['pageTitle'] = "Widget News";
+  $results['pageTitle'] = PAGE_TITLE;
   require( TEMPLATE_PATH . "/homepage.php" );
 }
  
